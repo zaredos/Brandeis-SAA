@@ -1,0 +1,62 @@
+<div class="data-form">
+  <form action="/events/create" method="POST">
+    <h2>Create a new event:</h2>
+    <label for="inputTitle">Title</label><br>
+    <input
+      type="text"
+      name="title"
+      id="inputTitle"
+      placeholder="Title"
+      autofocus
+      required
+    /><br>
+    <label for="inputDescription">Description</label><br>
+    <input
+      type="text"
+      name="description"
+      id="inputDescription"
+      placeholder="Description"
+      required
+    /><br>
+    <label for="inputLocation">Location</label><br>
+    <input
+      type="text"
+      name="location"
+      id="inputLocation"
+      placeholder="Location"
+      required
+    /><br>
+    <label for="inputStartDate">Start Date</label><br>
+    <input
+      type="datetime-local"
+      name="startDate"
+      id="inputStartDate"
+      required
+    /><br>
+    <label for="inputEndDate">End Date</label><br>
+    <input
+      type="datetime-local"
+      name="endDate"
+      id="inputEndDate"
+      required
+    /><br>
+    <label for="inputIsOnline">Is Online?</label><br>
+    <input
+      type="checkbox"
+      name="isOnline"
+      id="inputIsOnline"
+    /><br>
+    <label for="inputRegistrationLink">Registration Link</label><br>
+    <input
+      type="text"
+      name="registrationLink"
+      id="inputRegistrationLink"
+      placeholder="Registration Link"
+    /><br><br>
+    <% if (loggedIn) {  %> 
+      <button type="submit">Create Event</button>
+    <%} else {%>
+      Please log in to create this event.
+    <% } %>
+  </form>
+</div>

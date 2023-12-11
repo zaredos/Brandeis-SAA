@@ -1,0 +1,88 @@
+<div class="data-form">
+  <form action="/jobs/create" method="POST">
+    <h2>Create a new job:</h2>
+    <label for="inputTitle">Title</label><br>
+    <input
+      type="text"
+      name="title"
+      id="inputTitle"
+      placeholder="Title"
+      autofocus
+      required
+    /><br>
+    <label for="inputCompany">Company</label><br>
+    <input
+      type="text"
+      name="company"
+      id="inputCompany"
+      placeholder="Company"
+      required
+    /><br>
+    <label for="inputLocation">Location</label><br>
+    <input
+      type="text"
+      name="location"
+      id="inputLocation"
+      placeholder="Location"
+      required
+    /><br>
+    <label for="inputDescription">Description</label><br>
+    <input
+      type="text"
+      name="description"
+      id="inputDescription"
+      placeholder="Description"
+      required
+    /><br>
+    <label for="inputRequirements">Requirements</label><br>
+    <input
+      type="text"
+      name="requirements"
+      id="inputRequirements"
+      placeholder="Requirements"
+      required
+    /><br>
+    <label for="inputSalary">Salary</label><br>
+    <input
+      type="number"
+      name="salary"
+      id="inputSalary"
+      placeholder="Salary"
+      required
+    /><br>
+    <label for="inputContactEmail">Contact Email</label><br>
+    <input
+      type="email"
+      name="contactEmail"
+      id="inputContactEmail"
+      placeholder="Contact Email"
+      required
+    /><br>
+    <label for="inputContactPhone">Contact Phone</label><br>
+    <input
+      type="tel"
+      name="contactPhone"
+      id="inputContactPhone"
+      placeholder="Contact Phone"
+      required
+    /><br>
+    <label for="inputDeadlineDate">Deadline Date</label><br>
+    <input
+      type="datetime-local"
+      name="deadlineDate"
+      id="inputDeadlineDate"
+      required
+    /><br>
+    <label for="inputIsActive">Is Active?</label><br>
+    <input
+      type="checkbox"
+      name="isActive"
+      id="inputIsActive"
+      checked
+    /><br><br>
+    <% if (loggedIn) {  %> 
+      <button type="submit">Create Job</button>
+    <%} else {%>
+      Please log in to create this job.
+    <% } %>  </form>
+</div>

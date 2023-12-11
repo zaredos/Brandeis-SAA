@@ -1,0 +1,104 @@
+<div class="data-form">
+  <form action="/users/create" method="POST">
+    <h2>Create a new user:</h2>
+    <label for="inputName">Name</label><br>
+    <input
+      type="text"
+      name="name"
+      id="inputName"
+      placeholder="Name"
+      autofocus
+      required
+    /><br>
+    <label for="inputEmail">Email address</label><br>
+    <input
+      type="email"
+      name="email"
+      id="inputEmail"
+      placeholder="Email address"
+      required
+      unique
+    /><br>
+    <label for="inputPassword">Password</label><br>
+    <input
+      type="password"
+      name="password"
+      id="inputPassword"
+      placeholder="Password"
+      required
+    /><br>
+    <label for="inputRole">Role</label><br>
+    <select name="role" id="inputRole">
+      <option value="student" selected>Student</option>
+      <option value="alumni">Alumni</option>
+    </select><br>
+    <label for="inputGraduationYear">Graduation Year</label><br>
+    <input
+      type="number"
+      name="graduationYear"
+      id="inputGraduationYear"
+      placeholder="Graduation Year"
+      required
+    /><br>
+    <label for="inputMajor">Major</label><br>
+    <input
+      type="text"
+      name="major"
+      id="inputMajor"
+      placeholder="Major"
+      required
+    /><br>
+    <label for="inputJob">Job</label><br>
+    <input
+      type="text"
+      name="job"
+      id="inputJob"
+      placeholder="Job"
+    /><br>
+    <label for="inputCompany">Company</label><br>
+    <input
+      type="text"
+      name="company"
+      id="inputCompany"
+      placeholder="Company"
+    /><br>
+    <label for="inputCity">City</label><br>
+    <input
+      type="text"
+      name="city"
+      id="inputCity"
+      placeholder="City"
+    /><br>
+    <label for="inputState">State</label><br>
+    <input
+      type="text"
+      name="state"
+      id="inputState"
+      placeholder="State"
+    /><br>
+    <label for="inputCountry">Country</label><br>
+    <input
+      type="text"
+      name="country"
+      id="inputCountry"
+      placeholder="Country"
+    /><br>
+    <label for="inputZipCode">Zip Code</label><br>
+    <input
+      type="number"
+      name="zipCode"
+      id="inputZipCode"
+      placeholder="Zip Code"
+      min="10000"
+      max="99999"
+      required
+    /><br>
+    <label for="inputBio">Bio</label><br>
+    <textarea
+      name="bio"
+      id="inputBio"
+      placeholder="Bio"
+    ></textarea><br>
+    <button type="submit">Sign up</button>
+  </form>
+</div>
